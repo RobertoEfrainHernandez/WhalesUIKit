@@ -28,6 +28,7 @@ extension WhalesViewController: CompositionalLayout {
   func configureCollectionView() {
     whalesCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
     whalesCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    whalesCollectionView.delegate = self
     view.addSubview(whalesCollectionView)
   }
   
@@ -50,9 +51,13 @@ extension WhalesViewController: CompositionalLayout {
   }
 }
 
+//MARK:- CollectionView Delegate
+
 extension WhalesViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let whale = whales[indexPath.item]
-    
+    let detailViewController = WhaleDetailViewController(whale: whale)
+    detailViewController.modalPresentationStyle = .overFullScreen
+    present(detailViewController, animated: true)
   }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		571D5FBC25ED691900C7870A /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D5FBB25ED691900C7870A /* CloseButton.swift */; };
+		571D5FC125ED6B6E00C7870A /* WhaleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D5FC025ED6B6E00C7870A /* WhaleDetailView.swift */; };
 		57B7341825EC1F5B004815A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7341725EC1F5B004815A6 /* AppDelegate.swift */; };
 		57B7341A25EC1F5B004815A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7341925EC1F5B004815A6 /* SceneDelegate.swift */; };
 		57B7341C25EC1F5B004815A6 /* WhalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7341B25EC1F5B004815A6 /* WhalesViewController.swift */; };
@@ -20,6 +22,7 @@
 		57B7349725EC2E79004815A6 /* WhaleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7349625EC2E79004815A6 /* WhaleCell.swift */; };
 		57B7349C25EC3DAE004815A6 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B7349B25EC3DAE004815A6 /* ImageLoader.swift */; };
 		57B734B025EC6306004815A6 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 57B734AF25EC6306004815A6 /* SDWebImage */; };
+		57C7990825ECCABF00F651EF /* WhaleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C7990725ECCABF00F651EF /* WhaleDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		571D5FBB25ED691900C7870A /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		571D5FC025ED6B6E00C7870A /* WhaleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhaleDetailView.swift; sourceTree = "<group>"; };
 		57B7341425EC1F5B004815A6 /* WhalesUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhalesUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B7341725EC1F5B004815A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B7341925EC1F5B004815A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 		57B7348C25EC2444004815A6 /* Whale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whale.swift; sourceTree = "<group>"; };
 		57B7349625EC2E79004815A6 /* WhaleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhaleCell.swift; sourceTree = "<group>"; };
 		57B7349B25EC3DAE004815A6 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		57C7990725ECCABF00F651EF /* WhaleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhaleDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		571D5FC525ED712000C7870A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				571D5FC025ED6B6E00C7870A /* WhaleDetailView.swift */,
+				57B7349625EC2E79004815A6 /* WhaleCell.swift */,
+				571D5FBB25ED691900C7870A /* CloseButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		571D5FC625ED713100C7870A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57B7341B25EC1F5B004815A6 /* WhalesViewController.swift */,
+				57C7990725ECCABF00F651EF /* WhaleDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		571D5FCA25ED714600C7870A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57B7348C25EC2444004815A6 /* Whale.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		571D5FCE25ED715C00C7870A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				57B7348725EC234E004815A6 /* CompositionalLayout.swift */,
+				57B7349B25EC3DAE004815A6 /* ImageLoader.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		57B7340B25EC1F5B004815A6 = {
 			isa = PBXGroup;
 			children = (
@@ -111,11 +153,10 @@
 			children = (
 				57B7341725EC1F5B004815A6 /* AppDelegate.swift */,
 				57B7341925EC1F5B004815A6 /* SceneDelegate.swift */,
-				57B7348C25EC2444004815A6 /* Whale.swift */,
-				57B7349B25EC3DAE004815A6 /* ImageLoader.swift */,
-				57B7341B25EC1F5B004815A6 /* WhalesViewController.swift */,
-				57B7349625EC2E79004815A6 /* WhaleCell.swift */,
-				57B7348725EC234E004815A6 /* CompositionalLayout.swift */,
+				571D5FCA25ED714600C7870A /* Model */,
+				571D5FC625ED713100C7870A /* Controllers */,
+				571D5FC525ED712000C7870A /* Views */,
+				571D5FCE25ED715C00C7870A /* Utilities */,
 				57B7341D25EC1F5B004815A6 /* Main.storyboard */,
 				57B7342025EC1F5D004815A6 /* Assets.xcassets */,
 				57B7342225EC1F5D004815A6 /* LaunchScreen.storyboard */,
@@ -279,10 +320,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				57B7349C25EC3DAE004815A6 /* ImageLoader.swift in Sources */,
+				571D5FC125ED6B6E00C7870A /* WhaleDetailView.swift in Sources */,
 				57B7341C25EC1F5B004815A6 /* WhalesViewController.swift in Sources */,
 				57B7349725EC2E79004815A6 /* WhaleCell.swift in Sources */,
+				571D5FBC25ED691900C7870A /* CloseButton.swift in Sources */,
 				57B7348D25EC2444004815A6 /* Whale.swift in Sources */,
 				57B7341825EC1F5B004815A6 /* AppDelegate.swift in Sources */,
+				57C7990825ECCABF00F651EF /* WhaleDetailViewController.swift in Sources */,
 				57B7341A25EC1F5B004815A6 /* SceneDelegate.swift in Sources */,
 				57B7348825EC234E004815A6 /* CompositionalLayout.swift in Sources */,
 			);
