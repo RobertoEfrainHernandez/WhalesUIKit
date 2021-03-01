@@ -39,7 +39,7 @@ extension UIView {
 
 extension CAGradientLayer {
   func setUpGradient() {
-    colors = [#colorLiteral(red: 0.4941176471, green: 0.9098039216, blue: 0.9803921569, alpha: 1).cgColor, #colorLiteral(red: 0.9333333333, green: 0.7529411765, blue: 0.7764705882, alpha: 1).cgColor]
+    colors = [UIColor(named: "TopColor")!.cgColor, UIColor(named: "BottomColor")!.cgColor]
     startPoint = CGPoint(x: 0, y: 0)
     endPoint = CGPoint(x: 1, y: 1)
   }
