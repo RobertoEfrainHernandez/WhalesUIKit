@@ -27,6 +27,7 @@ final class WhalesViewController: UIViewController {
 extension WhalesViewController: CompositionalLayout {
   func configureCollectionView() {
     whalesCollectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+    whalesCollectionView.backgroundColor = .systemBackground
     whalesCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     whalesCollectionView.delegate = self
     view.addSubview(whalesCollectionView)

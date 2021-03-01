@@ -21,9 +21,7 @@ final class WhaleDetailViewController: UIViewController {
   }
   
   override func loadView() {
-    let detailView = WhaleDetailView()
-    detailView.whale = whale
-    detailView.action = dismissDetail
+    let detailView = WhaleDetailView(whale: whale, action: dismissDetail)
     view = detailView
   }
   

@@ -8,8 +8,13 @@
 import UIKit
 
 final class WhaleDetailView: UIView {
+  
+  private let whale: Whale
+  private let action: (() -> Void)
+  private let whaleImageView = WhaleImageView(frame: .zero)
+  private let whaleLabel = WhaleLabel(30)
   private let closeButton = CloseButton(UIImage(systemName: "chevron.down")!)
-  var action: (() -> Void)!
+  
   
   private lazy var gradientView: CAGradientLayer = {
     let gradientLayer = CAGradientLayer()
@@ -18,31 +23,15 @@ final class WhaleDetailView: UIView {
     return gradientLayer
   }()
   
-  private var whaleImageView: UIImageView = {
-    let imageView = UIImageView()
-    imageView.translatesAutoresizingMaskIntoConstraints = false
-    imageView.contentMode = .scaleAspectFit
-    return imageView
-  }()
   
-  private var whaleLabel: UILabel = {
-    let label = UILabel()
-    label.textColor = .secondarySystemBackground
-    label.font = .boldSystemFont(ofSize: 17)
-    label.adjustsFontSizeToFitWidth = true
-    return label
-  }()
   
-  var whale: Whale! {
-    didSet {
-      whaleLabel.text = whale.name
-      whaleImageView.sd_setImage(with: whale.image)
-    }
-  }
-  
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    configureStackView()
+  init(whale: Whale, action: @escaping () -> Void) {
+    self.whale = whale
+    self.action = action
+    super.init(frame: .zero)
+    stack(views: [whaleImageView, whaleLabel, UIView()], spacing: 12, alignment: .center)
+    whaleLabel.text = whale.name
+    whaleImageView.sd_setImage(with: whale.image)
     configureButton()
     closeButton.addTarget(self, action: #selector(handleDismiss), for: .touchUpInside)
   }
@@ -56,29 +45,8 @@ final class WhaleDetailView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  @objc func handleDismiss() {
+  @objc private func handleDismiss() {
     action()
-  }
-  
-  private func configureStackView() {
-    let stackView = UIStackView(arrangedSubviews: [whaleImageView, whaleLabel, UIView()])
-    stackView.axis = .vertical
-    stackView.distribution = .fill
-    stackView.alignment = .center
-    stackView.spacing = 16
-    stackView.translatesAutoresizingMaskIntoConstraints = false
-    
-    addSubview(stackView)
-    
-    let ivConstraints: [NSLayoutConstraint] = [
-      stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-      stackView.topAnchor.constraint(equalTo: topAnchor),
-      stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-      stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-      stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
-    ]
-    
-    NSLayoutConstraint.activate(ivConstraints)
   }
   
   private func configureButton() {
@@ -87,7 +55,6 @@ final class WhaleDetailView: UIView {
       closeButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
       closeButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16)
     ]
-    
     NSLayoutConstraint.activate(buttonContriants)
   }
 }
