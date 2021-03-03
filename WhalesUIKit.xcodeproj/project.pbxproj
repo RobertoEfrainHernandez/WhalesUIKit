@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57105E5125F0484F004F4AA0 /* WhalesViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57105E5025F0484F004F4AA0 /* WhalesViewPreview.swift */; };
 		571D5FBC25ED691900C7870A /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D5FBB25ED691900C7870A /* CloseButton.swift */; };
 		571D5FC125ED6B6E00C7870A /* WhaleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571D5FC025ED6B6E00C7870A /* WhaleDetailView.swift */; };
 		57929D5025EDACD6000F3AC9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57929D4F25EDACD6000F3AC9 /* Extensions.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57105E5025F0484F004F4AA0 /* WhalesViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhalesViewPreview.swift; sourceTree = "<group>"; };
 		571D5FBB25ED691900C7870A /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		571D5FC025ED6B6E00C7870A /* WhaleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhaleDetailView.swift; sourceTree = "<group>"; };
 		57929D4F25EDACD6000F3AC9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				57B7341B25EC1F5B004815A6 /* WhalesViewController.swift */,
 				57C7990725ECCABF00F651EF /* WhaleDetailViewController.swift */,
+				57105E5025F0484F004F4AA0 /* WhalesViewPreview.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				57B7341C25EC1F5B004815A6 /* WhalesViewController.swift in Sources */,
 				57B7349725EC2E79004815A6 /* WhaleCell.swift in Sources */,
 				57929D5525EDAD5B000F3AC9 /* WhaleLabel.swift in Sources */,
+				57105E5125F0484F004F4AA0 /* WhalesViewPreview.swift in Sources */,
 				571D5FBC25ED691900C7870A /* CloseButton.swift in Sources */,
 				57B7348D25EC2444004815A6 /* Whale.swift in Sources */,
 				57B7341825EC1F5B004815A6 /* AppDelegate.swift in Sources */,
